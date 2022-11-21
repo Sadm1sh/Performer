@@ -11,8 +11,7 @@ CREATE TABLE IF NOT EXISTS Performers (
 CREATE TABLE IF NOT EXISTS GenrePerfomer (
     Genre_id INTEGER REFERENCES Genres(id)
     , Perfomer_id INTEGER REFERENCES Performers(id)
-    ,
-	CONSTRAINT pk_GenrePerfomer PRIMARY KEY (
+    , CONSTRAINT pk_GenrePerfomer PRIMARY KEY (
         Genre_id
         , Perfomer_id
     )
@@ -49,10 +48,8 @@ CREATE TABLE IF NOT EXISTS Compilations (
 CREATE TABLE IF NOT EXISTS SongCompilation (
     Song_id INTEGER REFERENCES Songs(id)
     , Compilation_id INTEGER REFERENCES Compilations(id)
-    ,
-    CONSTRAINT pk_SongCompilation PRIMARY KEY (
+    , CONSTRAINT pk_SongCompilation PRIMARY KEY (
         Song_id
         , Compilation_id
     )
 );
-
